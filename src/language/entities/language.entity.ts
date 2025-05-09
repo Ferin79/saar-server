@@ -3,10 +3,13 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  OneToMany,
   PrimaryColumn,
+  Relation,
   UpdateDateColumn,
 } from 'typeorm';
 import { ApiProperty } from '@nestjs/swagger';
+import { ChapterTranslation } from '../../chapter/entities/chapter-translation.entity.js';
 
 export enum Direction {
   LTR = 'LTR',
@@ -59,6 +62,9 @@ export class Language extends BaseEntity {
   })
   @Column({ default: true })
   is_active: boolean;
+
+  @OneToMany(() => ChapterTranslation, (translation) => translation.language)
+  translations: Relation<ChapterTranslation[]>;
 
   @ApiProperty({
     description: 'The date and time when the language was created',
