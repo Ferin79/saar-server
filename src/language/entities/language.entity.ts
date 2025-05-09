@@ -1,4 +1,11 @@
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import {
+  BaseEntity,
+  Column,
+  CreateDateColumn,
+  Entity,
+  PrimaryColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import { ApiProperty } from '@nestjs/swagger';
 
 export enum Direction {
@@ -52,4 +59,20 @@ export class Language extends BaseEntity {
   })
   @Column({ default: true })
   is_active: boolean;
+
+  @ApiProperty({
+    description: 'The date and time when the language was created',
+    type: 'string',
+    format: 'date-time',
+  })
+  @CreateDateColumn()
+  createdAt: Date;
+
+  @ApiProperty({
+    description: 'The date and time when the language was last updated',
+    type: 'string',
+    format: 'date-time',
+  })
+  @UpdateDateColumn()
+  updatedAt: Date;
 }
