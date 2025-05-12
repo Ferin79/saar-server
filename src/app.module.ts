@@ -1,70 +1,83 @@
-import { AdminModule } from '@adminjs/nestjs';
-import * as AdminJSTypeorm from '@adminjs/typeorm';
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
+import { UsersModule } from './users/users.module';
+import { FilesModule } from './files/files.module';
+import { AuthModule } from './auth/auth.module';
+import databaseConfig from './database/config/database.config';
+import authConfig from './auth/config/auth.config';
+import appConfig from './config/app.config';
+import mailConfig from './mail/config/mail.config';
+import fileConfig from './files/config/file.config';
+import googleConfig from './auth-google/config/google.config';
+import appleConfig from './auth-apple/config/apple.config';
+import path from 'path';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import AdminJS from 'adminjs';
-import { AppController } from './app.controller.js';
-import { AppService } from './app.service.js';
-import { Language } from './language/entities/language.entity.js';
-import { LanguageModule } from './language/language.module.js';
-import { User } from './user/entities/user.entity.js';
-import { UserModule } from './user/user.module.js';
-import { UserResource } from './user/user.resource.js';
-import { Chapter } from './chapter/entities/chapter.entity.js';
-import { ChapterTranslation } from './chapter/entities/chapter-translation.entity.js';
-import { ChapterImage } from './chapter/entities/chapter-image.entity.js';
-import { ChapterModule } from './chapter/chapter.module.js';
-import { ChapterTranslationResource } from './chapter/chapterTranslation.resource.js';
+import { AuthAppleModule } from './auth-apple/auth-apple.module';
+import { AuthGoogleModule } from './auth-google/auth-google.module';
+import { HeaderResolver, I18nModule } from 'nestjs-i18n';
+import { TypeOrmConfigService } from './database/typeorm-config.service';
+import { MailModule } from './mail/mail.module';
+import { HomeModule } from './home/home.module';
+import { DataSource, DataSourceOptions } from 'typeorm';
+import { AllConfigType } from './config/config.type';
+import { SessionModule } from './session/session.module';
+import { MailerModule } from './mailer/mailer.module';
 
-AdminJS.registerAdapter({
-  Database: AdminJSTypeorm.Database,
-  Resource: AdminJSTypeorm.Resource,
+const infrastructureDatabaseModule = TypeOrmModule.forRootAsync({
+  useClass: TypeOrmConfigService,
+  dataSourceFactory: async (options: DataSourceOptions) => {
+    return new DataSource(options).initialize();
+  },
 });
 
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: '.env',
+      isGlobal: true,
+      load: [
+        databaseConfig,
+        authConfig,
+        appConfig,
+        mailConfig,
+        fileConfig,
+        googleConfig,
+        appleConfig,
+      ],
+      envFilePath: ['.env'],
     }),
-    AdminModule.createAdminAsync({
-      useFactory: async () => {
-        return {
-          adminJsOptions: {
-            rootPath: '/admin',
-            resources: [
-              UserResource,
-              Language,
-              Chapter,
-              ChapterTranslationResource,
-              ChapterImage,
-            ],
-            branding: {
-              companyName: 'Saar Admin',
-              logo: '',
-              softwareBrothers: false,
-            },
+    infrastructureDatabaseModule,
+    I18nModule.forRootAsync({
+      useFactory: (configService: ConfigService<AllConfigType>) => ({
+        fallbackLanguage: configService.getOrThrow('app.fallbackLanguage', {
+          infer: true,
+        }),
+        loaderOptions: { path: path.join(__dirname, '/i18n/'), watch: true },
+      }),
+      resolvers: [
+        {
+          use: HeaderResolver,
+          useFactory: (configService: ConfigService<AllConfigType>) => {
+            return [
+              configService.get('app.headerLanguage', {
+                infer: true,
+              }),
+            ];
           },
-        };
-      },
+          inject: [ConfigService],
+        },
+      ],
+      imports: [ConfigModule],
+      inject: [ConfigService],
     }),
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      port: 5432,
-      host: process.env.DB_HOST,
-      username: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
-      entities: [User, Language, Chapter, ChapterTranslation, ChapterImage],
-      synchronize: true,
-      ssl: true,
-      logging: ['query', 'error'],
-    }),
-    UserModule,
-    LanguageModule,
-    ChapterModule,
+    UsersModule,
+    FilesModule,
+    AuthModule,
+    AuthGoogleModule,
+    AuthAppleModule,
+    SessionModule,
+    MailModule,
+    MailerModule,
+    HomeModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
