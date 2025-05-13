@@ -60,7 +60,7 @@ const infrastructurePersistenceModule = RelationalFilePersistenceModule;
             key: (request, file, callback) => {
               callback(
                 null,
-                `${randomStringGenerator()}.${file.originalname
+                `app/${randomStringGenerator()}.${file.originalname
                   .split('.')
                   .pop()
                   ?.toLowerCase()}`,
