@@ -16,12 +16,6 @@ import { EntityRelationalHelper } from '../../../../../utils/relational-entity-h
   name: 'chapter',
 })
 export class ChapterEntity extends EntityRelationalHelper {
-  @Column({
-    nullable: false,
-    type: String,
-  })
-  summary: string;
-
   @ManyToMany(() => FileEntity, { eager: true, nullable: false })
   @JoinTable()
   images: FileEntity[];

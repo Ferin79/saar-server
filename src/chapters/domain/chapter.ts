@@ -3,12 +3,6 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export class Chapter {
   @ApiProperty({
-    type: () => String,
-    nullable: false,
-  })
-  summary: string;
-
-  @ApiProperty({
     type: () => [FileType],
     nullable: false,
   })

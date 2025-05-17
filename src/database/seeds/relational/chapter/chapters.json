@@ -2,145 +2,109 @@
     {
         "number": 1,
         "slug": "arjuna-vishada-yoga",
-        "title_sanskrit": "Arjuna Vishada Yoga",
-        "title_english": "Arjuna’s Dilemma",
-        "summary": "Arjuna is gripped by sorrow and moral confusion on the battlefield. He refuses to fight and seeks Krishna’s guidance.",
+        "title_sanskrit": "अर्जुन विषाद योग",
         "verse_count": 47
     },
     {
         "number": 2,
         "slug": "sankhya-yoga",
-        "title_sanskrit": "Sankhya Yoga",
-        "title_english": "The Path of Knowledge",
-        "summary": "Krishna teaches the immortality of the soul, the nature of duty, and introduces Karma Yoga.",
+        "title_sanskrit": "सांख्य योग",
         "verse_count": 72
     },
     {
         "number": 3,
         "slug": "karma-yoga",
-        "title_sanskrit": "Karma Yoga",
-        "title_english": "The Path of Action",
-        "summary": "Krishna explains that selfless action, performed without attachment, leads to liberation.",
+        "title_sanskrit": "कर्म योग",
         "verse_count": 43
     },
     {
         "number": 4,
         "slug": "jnana-karma-sanyasa-yoga",
-        "title_sanskrit": "Jnana Karma Sanyasa Yoga",
-        "title_english": "Wisdom & Renunciation of Action",
-        "summary": "Krishna reveals his divine nature and the value of acting with wisdom and detachment.",
+        "title_sanskrit": "ज्ञान कर्म संन्यास योग",
         "verse_count": 42
     },
     {
         "number": 5,
         "slug": "karma-sanyasa-yoga",
-        "title_sanskrit": "Karma Sanyasa Yoga",
-        "title_english": "The Path of Renunciation",
-        "summary": "Renunciation and action in devotion are both paths to liberation, with Karma Yoga being more practical.",
+        "title_sanskrit": "कर्म संन्यास योग",
         "verse_count": 29
     },
     {
         "number": 6,
         "slug": "dhyana-yoga",
-        "title_sanskrit": "Dhyana Yoga",
-        "title_english": "The Path of Meditation",
-        "summary": "Krishna outlines the discipline of a meditative yogi, emphasizing balance and mental focus.",
+        "title_sanskrit": "ध्यान योग",
         "verse_count": 47
     },
     {
         "number": 7,
         "slug": "jnana-vijnana-yoga",
-        "title_sanskrit": "Jnana Vijnana Yoga",
-        "title_english": "Self-Knowledge & Realization",
-        "summary": "Krishna explains his divine manifestations and how true knowledge leads to devotion.",
+        "title_sanskrit": "ज्ञान विज्ञान योग",
         "verse_count": 30
     },
     {
         "number": 8,
         "slug": "aksara-brahma-yoga",
-        "title_sanskrit": "Aksara Brahma Yoga",
-        "title_english": "The Imperishable Brahman",
-        "summary": "Explores death, the soul’s journey, and how to attain liberation by remembering God.",
+        "title_sanskrit": "अक्षर ब्रह्म योग",
         "verse_count": 28
     },
     {
         "number": 9,
         "slug": "raja-vidya-raja-guhya-yoga",
-        "title_sanskrit": "Raja Vidya Raja Guhya Yoga",
-        "title_english": "Royal Knowledge & Royal Secret",
-        "summary": "The most confidential knowledge about Krishna’s supremacy and the power of devotion is shared.",
+        "title_sanskrit": "राज विद्या राज गुह्य योग",
         "verse_count": 34
     },
     {
         "number": 10,
         "slug": "vibhuti-yoga",
-        "title_sanskrit": "Vibhuti Yoga",
-        "title_english": "Divine Glories",
-        "summary": "Krishna lists his divine manifestations to help Arjuna recognize the divine in all aspects of life.",
+        "title_sanskrit": "विभूति योग",
         "verse_count": 42
     },
     {
         "number": 11,
         "slug": "vishwarupa-darshana-yoga",
-        "title_sanskrit": "Vishwarupa Darshana Yoga",
-        "title_english": "The Universal Form",
-        "summary": "Arjuna is granted divine vision and sees Krishna’s cosmic form, inspiring awe and devotion.",
+        "title_sanskrit": "विश्वरूप दर्शन योग",
         "verse_count": 55
     },
     {
         "number": 12,
         "slug": "bhakti-yoga",
-        "title_sanskrit": "Bhakti Yoga",
-        "title_english": "The Path of Devotion",
-        "summary": "Krishna praises devotion as the highest spiritual path and describes the traits of his true devotees.",
+        "title_sanskrit": "भक्ति योग",
         "verse_count": 20
     },
     {
         "number": 13,
         "slug": "kshetra-kshetrajna-vibhaga-yoga",
-        "title_sanskrit": "Kshetra Kshetrajna Vibhaga Yoga",
-        "title_english": "Field & Knower of the Field",
-        "summary": "Discusses the body and the soul, and how wisdom lies in knowing the difference between them.",
+        "title_sanskrit": "क्षेत्र क्षेत्रज्ञ विभाग योग",
         "verse_count": 35
     },
     {
         "number": 14,
         "slug": "gunatraya-vibhaga-yoga",
-        "title_sanskrit": "Gunatraya Vibhaga Yoga",
-        "title_english": "The Three Gunas",
-        "summary": "Krishna describes how sattva, rajas, and tamas influence behavior and spiritual progress.",
+        "title_sanskrit": "गुणत्रय विभाग योग",
         "verse_count": 27
     },
     {
         "number": 15,
         "slug": "purushottama-yoga",
-        "title_sanskrit": "Purushottama Yoga",
-        "title_english": "The Supreme Person",
-        "summary": "Using the tree metaphor, Krishna explains the material world and the Supreme Being beyond it.",
+        "title_sanskrit": "पुरुषोत्तम योग",
         "verse_count": 20
     },
     {
         "number": 16,
         "slug": "daivasura-sampad-vibhaga-yoga",
-        "title_sanskrit": "Daivasura Sampad Vibhaga Yoga",
-        "title_english": "Divine & Demoniac Natures",
-        "summary": "Contrasts divine virtues with demoniac traits and explains the consequences of each.",
+        "title_sanskrit": "दैवासुर संपद विभाग योग",
         "verse_count": 24
     },
     {
         "number": 17,
         "slug": "shraddhatraya-vibhaga-yoga",
-        "title_sanskrit": "Shraddhatraya Vibhaga Yoga",
-        "title_english": "Threefold Faith",
-        "summary": "Analyzes types of faith, food, and worship based on the three gunas (modes of nature).",
+        "title_sanskrit": "श्रद्धात्रय विभाग योग",
         "verse_count": 28
     },
     {
         "number": 18,
         "slug": "moksha-sanyasa-yoga",
-        "title_sanskrit": "Moksha Sanyasa Yoga",
-        "title_english": "Liberation through Renunciation",
-        "summary": "A comprehensive summary of the entire Gita; emphasizes surrender, renunciation, and the path to liberation.",
+        "title_sanskrit": "मोक्ष संन्यास योग",
         "verse_count": 78
     }
 ]

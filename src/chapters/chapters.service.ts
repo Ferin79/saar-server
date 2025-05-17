@@ -42,7 +42,6 @@ export class ChaptersService {
     return this.chapterRepository.create({
       // Do not remove comment below.
       // <creating-property-payload />
-      summary: createChapterDto.summary,
 
       images,
 
@@ -107,7 +106,6 @@ export class ChaptersService {
     return this.chapterRepository.update(id, {
       // Do not remove comment below.
       // <updating-property-payload />
-      summary: updateChapterDto.summary,
 
       images,
 

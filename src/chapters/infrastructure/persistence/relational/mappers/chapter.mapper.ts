@@ -7,7 +7,6 @@ import { ChapterEntity } from '../entities/chapter.entity';
 export class ChapterMapper {
   static toDomain(raw: ChapterEntity): Chapter {
     const domainEntity = new Chapter();
-    domainEntity.summary = raw.summary;
 
     if (raw.images) {
       domainEntity.images = raw.images.map((item) => FileMapper.toDomain(item));
@@ -28,7 +27,6 @@ export class ChapterMapper {
 
   static toPersistence(domainEntity: Chapter): ChapterEntity {
     const persistenceEntity = new ChapterEntity();
-    persistenceEntity.summary = domainEntity.summary;
 
     if (domainEntity.images) {
       persistenceEntity.images = domainEntity.images.map((item) =>

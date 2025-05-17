@@ -18,8 +18,7 @@ export class ChapterSeedService {
       const chapters = ChaptersData.map((chapter) => {
         return this.repository.create({
           number: chapter.number,
-          name: chapter.title_english,
-          summary: chapter.summary,
+          name: chapter.title_sanskrit,
           totalVerses: chapter.verse_count,
           images: [
             {

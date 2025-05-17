@@ -22,13 +22,6 @@ import {
 export class CreateChapterDto {
   @ApiProperty({
     required: true,
-    type: () => String,
-  })
-  @IsString()
-  summary: string;
-
-  @ApiProperty({
-    required: true,
     type: () => [FileDto],
   })
   @ValidateNested()
