@@ -23,6 +23,7 @@ import { AllConfigType } from './config/config.type';
 import { SessionModule } from './session/session.module';
 import { MailerModule } from './mailer/mailer.module';
 import { ChaptersModule } from './chapters/chapters.module';
+import { LanguagesModule } from './languages/languages.module';
 
 const infrastructureDatabaseModule = TypeOrmModule.forRootAsync({
   useClass: TypeOrmConfigService,
@@ -33,6 +34,7 @@ const infrastructureDatabaseModule = TypeOrmModule.forRootAsync({
 
 @Module({
   imports: [
+    LanguagesModule,
     ConfigModule.forRoot({
       isGlobal: true,
       load: [
