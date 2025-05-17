@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+import { ChapterTranslationSeedService } from './chapter-translation/chapter-translation-seed.service';
 import { LanguageSeedService } from './language/language-seed.service';
 import { RoleSeedService } from './role/role-seed.service';
 import { SeedModule } from './seed.module';
@@ -16,6 +17,8 @@ const runSeed = async () => {
   await app.get(ChapterSeedService).run();
 
   await app.get(LanguageSeedService).run();
+
+  await app.get(ChapterTranslationSeedService).run();
 
   await app.close();
 };

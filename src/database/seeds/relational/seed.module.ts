@@ -12,8 +12,11 @@ import { ChapterSeedModule } from './chapter/chapter-seed.module';
 
 import { LanguageSeedModule } from './language/language-seed.module';
 
+import { ChapterTranslationSeedModule } from './chapter-translation/chapter-translation-seed.module';
+
 @Module({
   imports: [
+    ChapterTranslationSeedModule,
     LanguageSeedModule,
     RoleSeedModule,
     StatusSeedModule,

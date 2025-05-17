@@ -1,0 +1,278 @@
+{
+    "en": [
+        {
+            "title": "Arjuna’s Dilemma",
+            "description": "Arjuna is gripped by sorrow and moral confusion on the battlefield. He refuses to fight and seeks Krishna’s guidance.",
+            "chapter_number": 1
+        },
+        {
+            "title": "The Path of Knowledge",
+            "description": "Krishna teaches the immortality of the soul, the nature of duty, and introduces Karma Yoga.",
+            "chapter_number": 2
+        },
+        {
+            "title": "The Path of Action",
+            "description": "Krishna explains that selfless action, performed without attachment, leads to liberation.",
+            "chapter_number": 3
+        },
+        {
+            "title": "Wisdom & Renunciation of Action",
+            "description": "Krishna reveals his divine nature and the value of acting with wisdom and detachment.",
+            "chapter_number": 4
+        },
+        {
+            "title": "The Path of Renunciation",
+            "description": "Renunciation and action in devotion are both paths to liberation, with Karma Yoga being more practical.",
+            "chapter_number": 5
+        },
+        {
+            "title": "The Path of Meditation",
+            "description": "Krishna outlines the discipline of a meditative yogi, emphasizing balance and mental focus.",
+            "chapter_number": 6
+        },
+        {
+            "title": "Self-Knowledge & Realization",
+            "description": "Krishna explains his divine manifestations and how true knowledge leads to devotion.",
+            "chapter_number": 7
+        },
+        {
+            "title": "The Imperishable Brahman",
+            "description": "Explores death, the soul’s journey, and how to attain liberation by remembering God.",
+            "chapter_number": 8
+        },
+        {
+            "title": "Royal Knowledge & Royal Secret",
+            "description": "The most confidential knowledge about Krishna’s supremacy and the power of devotion is shared.",
+            "chapter_number": 9
+        },
+        {
+            "title": "Divine Glories",
+            "description": "Krishna lists his divine manifestations to help Arjuna recognize the divine in all aspects of life.",
+            "chapter_number": 10
+        },
+        {
+            "title": "The Universal Form",
+            "description": "Arjuna is granted divine vision and sees Krishna’s cosmic form, inspiring awe and devotion.",
+            "chapter_number": 11
+        },
+        {
+            "title": "The Path of Devotion",
+            "description": "Krishna praises devotion as the highest spiritual path and describes the traits of his true devotees.",
+            "chapter_number": 12
+        },
+        {
+            "title": "Field & Knower of the Field",
+            "description": "Discusses the body and the soul, and how wisdom lies in knowing the difference between them.",
+            "chapter_number": 13
+        },
+        {
+            "title": "The Three Gunas",
+            "description": "Krishna describes how sattva, rajas, and tamas influence behavior and spiritual progress.",
+            "chapter_number": 14
+        },
+        {
+            "title": "The Supreme Person",
+            "description": "Using the tree metaphor, Krishna explains the material world and the Supreme Being beyond it.",
+            "chapter_number": 15
+        },
+        {
+            "title": "Divine & Demoniac Natures",
+            "description": "Contrasts divine virtues with demoniac traits and explains the consequences of each.",
+            "chapter_number": 16
+        },
+        {
+            "title": "Threefold Faith",
+            "description": "Analyzes types of faith, food, and worship based on the three gunas (modes of nature).",
+            "chapter_number": 17
+        },
+        {
+            "title": "Liberation through Renunciation",
+            "description": "A comprehensive summary of the entire Gita; emphasizes surrender, renunciation, and the path to liberation.",
+            "chapter_number": 18
+        }
+    ],
+    "hi": [
+        {
+            "title": "अर्जुन विषाद योग",
+            "description": "कुरुक्षेत्र में युद्ध की स्थिति देखकर अर्जुन मोह और शोक से ग्रस्त हो जाते हैं। वे अपने सगे-संबंधियों के विरुद्ध युद्ध करने को लेकर मानसिक द्वंद्व में फंस जाते हैं और शस्त्र त्याग देते हैं। इस अध्याय में अर्जुन की मानसिक स्थिति को विस्तार से वर्णित किया गया है।",
+            "chapter_number": 1
+        },
+        {
+            "title": "सांख्य योग",
+            "description": "इस अध्याय में श्रीकृष्ण आत्मा की अमरता, शरीर की नश्वरता और कर्तव्यपालन के महत्व की शिक्षा देते हैं। वे बताते हैं कि मनुष्य को अपने स्वधर्म का पालन करना चाहिए, चाहे वह कितना भी कठिन क्यों न हो।",
+            "chapter_number": 2
+        },
+        {
+            "title": "कर्म योग",
+            "description": "कर्मयोग का सारांश प्रस्तुत करते हुए श्रीकृष्ण बताते हैं कि व्यक्ति को कर्म तो करना चाहिए लेकिन फल की आसक्ति के बिना। निष्काम कर्म ही मोक्ष की ओर ले जाता है।",
+            "chapter_number": 3
+        },
+        {
+            "title": "ज्ञान कर्म संन्यास योग",
+            "description": "इस अध्याय में श्रीकृष्ण बताते हैं कि किस प्रकार ज्ञान और कर्म का समन्वय कर व्यक्ति आत्मा की शुद्धि और मोक्ष प्राप्त कर सकता है। वे यह भी स्पष्ट करते हैं कि वे स्वयं इस ज्ञान को पुनः प्रकट करने के लिए अवतरित होते हैं।",
+            "chapter_number": 4
+        },
+        {
+            "title": "कर्म संन्यास योग",
+            "description": "श्रीकृष्ण संन्यास (कर्म त्याग) और कर्मयोग (निष्काम कर्म) के बीच तुलना करते हैं और निष्कर्ष निकालते हैं कि कर्मयोग ही श्रेष्ठ मार्ग है।",
+            "chapter_number": 5
+        },
+        {
+            "title": "ध्यान योग",
+            "description": "ध्यानयोग की साधना के माध्यम से मन की एकाग्रता, संयम और आत्म-साक्षात्कार की विधि समझाई गई है। सच्चा योगी वह है जो सभी प्राणियों में एकता देखता है।",
+            "chapter_number": 6
+        },
+        {
+            "title": "ज्ञान विज्ञान योग",
+            "description": "इस अध्याय में भगवान श्रीकृष्ण अपने ईश्वरीय स्वरूप, शक्ति और ज्ञान का वर्णन करते हैं। वे कहते हैं कि केवल भक्ति के माध्यम से ही उन्हें जाना जा सकता है।",
+            "chapter_number": 7
+        },
+        {
+            "title": "अक्षर ब्रह्म योग",
+            "description": "मनुष्य की मृत्यु के समय की चेतना उसके अगले जन्म को तय करती है। श्रीकृष्ण समझाते हैं कि जो मृत्यु के समय उन्हें याद करता है, वह मोक्ष को प्राप्त करता है।",
+            "chapter_number": 8
+        },
+        {
+            "title": "राज विद्या राज गुह्य योग",
+            "description": "यह अध्याय सबसे गूढ़ और पवित्र ज्ञान को प्रकट करता है। श्रीकृष्ण कहते हैं कि भक्तिपूर्ण मन से उनकी शरण में आने वाला व्यक्ति उनका प्रिय होता है और वह उन्हें प्राप्त करता है।",
+            "chapter_number": 9
+        },
+        {
+            "title": "विभूति योग",
+            "description": "श्रीकृष्ण अपनी दिव्य विभूतियों का वर्णन करते हैं, जैसे कि वे अग्नि में तेज, जल में स्वाद और चंद्रमा में शीतलता हैं। वे बताते हैं कि वे समस्त सृष्टि में व्याप्त हैं।",
+            "chapter_number": 10
+        },
+        {
+            "title": "विश्वरूप दर्शन योग",
+            "description": "अर्जुन को भगवान श्रीकृष्ण अपनी विराट रूप का दर्शन कराते हैं जिसमें संपूर्ण ब्रह्मांड समाया हुआ दिखाई देता है। अर्जुन उस दिव्य रूप से भयभीत और विस्मित हो जाते हैं।",
+            "chapter_number": 11
+        },
+        {
+            "title": "भक्ति योग",
+            "description": "इस अध्याय में श्रीकृष्ण भक्ति की श्रेष्ठता का बखान करते हैं। वे कहते हैं कि जो भक्त सरलता, नम्रता और प्रेम से उनकी पूजा करता है, वह उन्हें अत्यंत प्रिय होता है।",
+            "chapter_number": 12
+        },
+        {
+            "title": "क्षेत्र क्षेत्रज्ञ विभाग योग",
+            "description": "क्षेत्र (शरीर) और क्षेत्रज्ञ (आत्मा) के बीच का भेद समझाया गया है। इस ज्ञान के माध्यम से आत्मा का साक्षात्कार संभव है।",
+            "chapter_number": 13
+        },
+        {
+            "title": "गुणत्रय विभाग योग",
+            "description": "सृष्टि के संचालन में तीन गुण—सत्त्व, रजस और तमस—की भूमिका और उनके प्रभाव को विस्तार से बताया गया है। मोक्ष के लिए इनसे ऊपर उठना आवश्यक है।",
+            "chapter_number": 14
+        },
+        {
+            "title": "पुरुषोत्तम योग",
+            "description": "पुरुषोत्तम योग में संसार के अश्वत्थ वृक्ष का वर्णन कर उसके काटने और पुरुषोत्तम (परमात्मा) तक पहुंचने का मार्ग बताया गया है।",
+            "chapter_number": 15
+        },
+        {
+            "title": "दैवासुर संपद विभाग योग",
+            "description": "दैवी और आसुरी गुणों का विस्तृत वर्णन करते हुए श्रीकृष्ण बताते हैं कि दैवी गुण मुक्ति की ओर और आसुरी गुण बंधन की ओर ले जाते हैं।",
+            "chapter_number": 16
+        },
+        {
+            "title": "श्रद्धात्रय विभाग योग",
+            "description": "मनुष्य की श्रद्धा, उसका भोजन, तप और दान—इन सबका स्वरूप उसके स्वभाव (गुणों) पर निर्भर करता है।",
+            "chapter_number": 17
+        },
+        {
+            "title": "मोक्ष संन्यास योग",
+            "description": "श्रीकृष्ण समस्त गीता का सार प्रस्तुत करते हैं और अर्जुन को अपना कर्तव्य निभाने की प्रेरणा देते हैं। वे भक्ति, त्याग और ज्ञान के माध्यम से मोक्ष प्राप्त करने की विधि बताते हैं।",
+            "chapter_number": 18
+        }
+    ],
+    "gu": [
+        {
+            "title": "અર્જુન વિષાદ યોગ",
+            "description": "કુરુક્ષેત્રના યુદ્ધ ક્ષેત્રે અર્જુન પોતાના સગાં-સંબંધીઓ સામે યુદ્ધ કરવા તૈયાર નથી. તે શોકગ્રસ્ત અને ગૂંચવાયેલ મનથી કૃષ્ણ પાસે માર્ગદર્શન માંગે છે. આ અધ્યાયમાં તેનું આંતરિક સંઘર્ષ દર્શાવવામાં આવે છે.",
+            "chapter_number": 1
+        },
+        {
+            "title": "સાંખ્ય યોગ",
+            "description": "આધ્યાત્મિક અને નૈતિક શિક્ષણ સાથે કૃષ્ણ આત્માની અમરતા અને શરીરની નાશવંતતા સમજાવે છે. તેઓ મનુષ્યને પોતાના કર્તવ્યનું પાલન કરવાની પ્રેરણા આપે છે.",
+            "chapter_number": 2
+        },
+        {
+            "title": "કર્મ યોગ",
+            "description": "ફળની અપેક્ષા વિના કર્તવ્યનું પાલન કરવું એ અધિક શ્રેષ્ઠ માર્ગ છે. નિષ્કામ કર્મ યોગ માણસને બાંધનોથી મુક્ત કરે છે.",
+            "chapter_number": 3
+        },
+        {
+            "title": "જ્ઞાન કર્મ સંન્યાસ યોગ",
+            "description": "શ્રીકૃષ્ણ જણાવે છે કે જ્ઞાન અને નિષ્કામ કર્મના સંયોજનથી મોક્ષ પ્રાપ્ત થઇ શકે છે. તેઓ પોતાના અવતારનું કારણ પણ સ્પષ્ટ કરે છે.",
+            "chapter_number": 4
+        },
+        {
+            "title": "કર્મ સંન્યાસ યોગ",
+            "description": "સંન્યાસ અને કર્મયોગ વચ્ચે તુલના કરીને શ્રીકૃષ્ણ કર્મયોગને શ્રેષ્ઠ માને છે, કારણ કે તે માનવ માટે વધુ વ્યવહારૂ છે.",
+            "chapter_number": 5
+        },
+        {
+            "title": "ધ્યાન યોગ",
+            "description": "યોગ સાધનાથી મનની શાંતિ, ધ્યાન અને આત્મસાક્ષાત્કાર મેળવવાનો માર્ગ દર્શાવાય છે. સાચો યોગી બધામાં ભગવાનને જુએ છે.",
+            "chapter_number": 6
+        },
+        {
+            "title": "જ્ઞાન વિજ્ઞાન યોગ",
+            "description": "શ્રીકૃષ્ણ પોતાના દૈવી સ્વરૂપ, શક્તિઓ અને ભક્તિથી તેમને ઓળખવાની રીત સમજાવે છે.",
+            "chapter_number": 7
+        },
+        {
+            "title": "અક્ષર બ્રહ્મ યોગ",
+            "description": "મૃત્યુ સમયે ભગવાનનું સ્મરણ કરનાર વ્યક્તિ મોક્ષ પામે છે. આ અધ્યાય આત્માની યાત્રા અને ભગવાન સાથેની એકતાને સ્પષ્ટ કરે છે.",
+            "chapter_number": 8
+        },
+        {
+            "title": "રાજ વિદ્યા રાજ ગુહ્ય યોગ",
+            "description": "શ્રીકૃષ્ણ કહે છે કે ભક્તિથી ભગવાન પ્રાપ્ત થાય છે. આ અધ્યાય ભક્તિના મહાત્મ્ય અને ગુહ્ય જ્ઞાનને દર્શાવે છે.",
+            "chapter_number": 9
+        },
+        {
+            "title": "વિભૂતિ યોગ",
+            "description": "આધ્યાત્મિક જ્ઞાન માટે શ્રીકૃષ્ણ પોતાની વિભૂતિઓનું વર્ણન કરે છે. તેઓ સર્વત્ર વ્યાપ્ત છે અને દરેક સુન્દરતા અને શક્તિમાં તેમનું દર્શન થાય છે.",
+            "chapter_number": 10
+        },
+        {
+            "title": "વિશ્વરૂપ દર્શન યોગ",
+            "description": "અર્જુનને કૃષ્ણ પોતાનું વિશ્વરૂપ દર્શાવે છે. આ રૂપે સમય, સંહાર અને સર્જનનો ભવ્ય દર્શન થાય છે, જે અર્જુનને અદ્ભુત અને ભયમક્ત બનાવે છે.",
+            "chapter_number": 11
+        },
+        {
+            "title": "ભક્તિ યોગ",
+            "description": "શ્રીકૃષ્ણ ભક્તિ યોગની મહત્તા જણાવે છે. ભક્તિ દ્વારા ભગવાનની કૃપા સરળતાથી પ્રાપ્ત થાય છે.",
+            "chapter_number": 12
+        },
+        {
+            "title": "ક્ષેત્ર ક્ષેત્રજ્ઞ વિભાગ યોગ",
+            "description": "આધ્યાત્મિક દૃષ્ટિકોણથી શરીર અને આત્મા વચ્ચેનો તફાવત સમજાવામાં આવે છે, અને તે જ સાચું જ્ઞાન ગણાય છે.",
+            "chapter_number": 13
+        },
+        {
+            "title": "ગુણત્રય વિભાગ યોગ",
+            "description": "મનુષ્યના વર્તન અને ચિંતન પર ત્રિગુણોનો કેવી અસર પડે છે અને તેને કેવી રીતે પાર કરી શકાય તે સમજાવાયું છે.",
+            "chapter_number": 14
+        },
+        {
+            "title": "પુરુષોત્તમ યોગ",
+            "description": "શાશ્વત વૃક્ષ અને પુરુષોત્તમનું તત્ત્વાત્મક વર્ણન કરે છે. જીવનના મૂળને સમજવા માટે આ માર્ગદર્શન આપે છે.",
+            "chapter_number": 15
+        },
+        {
+            "title": "દૈવાસુર સંપદ વિભાગ યોગ",
+            "description": "દૈવી અને આસુરી ગુણોનું વર્ણન કરીને એમ કહે છે કે દૈવી ગુણો મોક્ષ તરફ અને આસુરી બાંધન તરફ લઈ જાય છે.",
+            "chapter_number": 16
+        },
+        {
+            "title": "શ્રદ્ધાત્રય વિભાગ યોગ",
+            "description": "શ્રદ્ધાના ત્રણ પ્રકારો મુજબ માણસના જીવન પર તેનું કઈ રીતે પ્રભાવ પડે છે તે વિસ્તૃત રીતે સમજાવવામાં આવે છે.",
+            "chapter_number": 17
+        },
+        {
+            "title": "મોક્ષ સંન્યાસ યોગ",
+            "description": "શ્રીકૃષ્ણ આખી ગીતા નું સાર આપીને ભક્તિ, ત્યાગ અને કર્તવ્યનું મહત્વ સમજાવે છે અને અર્જુનને યુદ્ધ માટે પ્રેરણા આપે છે.",
+            "chapter_number": 18
+        }
+    ]
+}
