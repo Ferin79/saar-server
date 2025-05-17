@@ -10,8 +10,11 @@ import databaseConfig from '../../config/database.config';
 import appConfig from '../../../config/app.config';
 import { ChapterSeedModule } from './chapter/chapter-seed.module';
 
+import { LanguageSeedModule } from './language/language-seed.module';
+
 @Module({
   imports: [
+    LanguageSeedModule,
     RoleSeedModule,
     StatusSeedModule,
     UserSeedModule,

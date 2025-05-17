@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+import { LanguageSeedService } from './language/language-seed.service';
 import { RoleSeedService } from './role/role-seed.service';
 import { SeedModule } from './seed.module';
 import { StatusSeedService } from './status/status-seed.service';
@@ -13,6 +14,8 @@ const runSeed = async () => {
   await app.get(StatusSeedService).run();
   await app.get(UserSeedService).run();
   await app.get(ChapterSeedService).run();
+
+  await app.get(LanguageSeedService).run();
 
   await app.close();
 };
