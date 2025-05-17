@@ -1,6 +1,11 @@
+import { FilesService } from '../files/files.service';
+import { FileType } from '../files/domain/file';
+
 import {
   // common
   Injectable,
+  HttpStatus,
+  UnprocessableEntityException,
 } from '@nestjs/common';
 import { CreateChapterDto } from './dto/create-chapter.dto';
 import { UpdateChapterDto } from './dto/update-chapter.dto';
@@ -11,6 +16,8 @@ import { Chapter } from './domain/chapter';
 @Injectable()
 export class ChaptersService {
   constructor(
+    private readonly fileService: FilesService,
+
     // Dependencies here
     private readonly chapterRepository: ChapterRepository,
   ) {}
@@ -19,9 +26,26 @@ export class ChaptersService {
     // Do not remove comment below.
     // <creating-property />
 
+    const imagesObjects = await this.fileService.findByIds(
+      createChapterDto.images.map((entity) => entity.id),
+    );
+    if (imagesObjects.length !== createChapterDto.images.length) {
+      throw new UnprocessableEntityException({
+        status: HttpStatus.UNPROCESSABLE_ENTITY,
+        errors: {
+          images: 'notExists',
+        },
+      });
+    }
+    const images = imagesObjects;
+
     return this.chapterRepository.create({
       // Do not remove comment below.
       // <creating-property-payload />
+      summary: createChapterDto.summary,
+
+      images,
+
       totalVerses: createChapterDto.totalVerses,
 
       name: createChapterDto.name,
@@ -63,9 +87,30 @@ export class ChaptersService {
     // Do not remove comment below.
     // <updating-property />
 
+    let images: FileType[] | undefined = undefined;
+
+    if (updateChapterDto.images) {
+      const imagesObjects = await this.fileService.findByIds(
+        updateChapterDto.images.map((entity) => entity.id),
+      );
+      if (imagesObjects.length !== updateChapterDto.images.length) {
+        throw new UnprocessableEntityException({
+          status: HttpStatus.UNPROCESSABLE_ENTITY,
+          errors: {
+            images: 'notExists',
+          },
+        });
+      }
+      images = imagesObjects;
+    }
+
     return this.chapterRepository.update(id, {
       // Do not remove comment below.
       // <updating-property-payload />
+      summary: updateChapterDto.summary,
+
+      images,
+
       totalVerses: updateChapterDto.totalVerses,
 
       name: updateChapterDto.name,

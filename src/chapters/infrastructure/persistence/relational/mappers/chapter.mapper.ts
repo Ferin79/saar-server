@@ -1,10 +1,18 @@
 import { Chapter } from '../../../../domain/chapter';
 
+import { FileMapper } from '../../../../../files/infrastructure/persistence/relational/mappers/file.mapper';
+
 import { ChapterEntity } from '../entities/chapter.entity';
 
 export class ChapterMapper {
   static toDomain(raw: ChapterEntity): Chapter {
     const domainEntity = new Chapter();
+    domainEntity.summary = raw.summary;
+
+    if (raw.images) {
+      domainEntity.images = raw.images.map((item) => FileMapper.toDomain(item));
+    }
+
     domainEntity.totalVerses = raw.totalVerses;
 
     domainEntity.name = raw.name;
@@ -20,6 +28,14 @@ export class ChapterMapper {
 
   static toPersistence(domainEntity: Chapter): ChapterEntity {
     const persistenceEntity = new ChapterEntity();
+    persistenceEntity.summary = domainEntity.summary;
+
+    if (domainEntity.images) {
+      persistenceEntity.images = domainEntity.images.map((item) =>
+        FileMapper.toPersistence(item),
+      );
+    }
+
     persistenceEntity.totalVerses = domainEntity.totalVerses;
 
     persistenceEntity.name = domainEntity.name;

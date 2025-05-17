@@ -31,6 +31,7 @@ export class ChapterRelationalRepository implements ChapterRepository {
     const entities = await this.chapterRepository.find({
       skip: (paginationOptions.page - 1) * paginationOptions.limit,
       take: paginationOptions.limit,
+      order: { number: 'ASC' },
     });
 
     return entities.map((entity) => ChapterMapper.toDomain(entity));

@@ -1,6 +1,19 @@
+import { FileType } from '../../files/domain/file';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class Chapter {
+  @ApiProperty({
+    type: () => String,
+    nullable: false,
+  })
+  summary: string;
+
+  @ApiProperty({
+    type: () => [FileType],
+    nullable: false,
+  })
+  images: FileType[];
+
   @ApiProperty({
     type: () => Number,
     nullable: false,

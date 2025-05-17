@@ -1,3 +1,5 @@
+import { FileEntity } from '../../../../../files/infrastructure/persistence/relational/entities/file.entity';
+
 import {
   CreateDateColumn,
   Entity,
@@ -5,6 +7,8 @@ import {
   UpdateDateColumn,
   Column,
   Index,
+  JoinTable,
+  ManyToMany,
 } from 'typeorm';
 import { EntityRelationalHelper } from '../../../../../utils/relational-entity-helper';
 
@@ -12,6 +16,16 @@ import { EntityRelationalHelper } from '../../../../../utils/relational-entity-h
   name: 'chapter',
 })
 export class ChapterEntity extends EntityRelationalHelper {
+  @Column({
+    nullable: false,
+    type: String,
+  })
+  summary: string;
+
+  @ManyToMany(() => FileEntity, { eager: true, nullable: false })
+  @JoinTable()
+  images: FileEntity[];
+
   @Column({
     nullable: false,
     type: Number,

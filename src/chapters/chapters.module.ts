@@ -1,3 +1,4 @@
+import { FilesModule } from '../files/files.module';
 import {
   // do not remove this comment
   Module,
@@ -8,6 +9,8 @@ import { RelationalChapterPersistenceModule } from './infrastructure/persistence
 
 @Module({
   imports: [
+    FilesModule,
+
     // do not remove this comment
     RelationalChapterPersistenceModule,
   ],
