@@ -32,8 +32,11 @@ const infrastructureDatabaseModule = TypeOrmModule.forRootAsync({
   },
 });
 
+import { ChapterTranslationsModule } from './chapter-translations/chapter-translations.module';
+
 @Module({
   imports: [
+    ChapterTranslationsModule,
     LanguagesModule,
     ConfigModule.forRoot({
       isGlobal: true,
