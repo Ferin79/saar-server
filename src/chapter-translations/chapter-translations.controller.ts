@@ -17,6 +17,9 @@ import {
   ApiParam,
   ApiTags,
 } from '@nestjs/swagger';
+import { Roles } from '../roles/roles.decorator';
+import { RoleEnum } from '../roles/roles.enum';
+import { RolesGuard } from '../roles/roles.guard';
 import {
   InfinityPaginationResponse,
   InfinityPaginationResponseDto,
@@ -28,7 +31,7 @@ import { CreateChapterTranslationDto } from './dto/create-chapter-translation.dt
 import { FindAllChapterTranslationsDto } from './dto/find-all-chapter-translations.dto';
 import { UpdateChapterTranslationDto } from './dto/update-chapter-translation.dto';
 
-@ApiTags('Chaptertranslations')
+@ApiTags('Chapter Translations')
 @ApiBearerAuth()
 @UseGuards(AuthGuard('jwt'))
 @Controller({
@@ -40,6 +43,8 @@ export class ChapterTranslationsController {
     private readonly chapterTranslationsService: ChapterTranslationsService,
   ) {}
 
+  @Roles(RoleEnum.admin)
+  @UseGuards(RolesGuard)
   @Post()
   @ApiCreatedResponse({
     type: ChapterTranslation,
@@ -110,6 +115,8 @@ export class ChapterTranslationsController {
     return this.chapterTranslationsService.findById(id);
   }
 
+  @Roles(RoleEnum.admin)
+  @UseGuards(RolesGuard)
   @Patch(':id')
   @ApiParam({
     name: 'id',
@@ -129,6 +136,8 @@ export class ChapterTranslationsController {
     );
   }
 
+  @Roles(RoleEnum.admin)
+  @UseGuards(RolesGuard)
   @Delete(':id')
   @ApiParam({
     name: 'id',

@@ -27,6 +27,9 @@ import {
 } from '../utils/dto/infinity-pagination-response.dto';
 import { infinityPagination } from '../utils/infinity-pagination';
 import { FindAllLanguagesDto } from './dto/find-all-languages.dto';
+import { Roles } from '../roles/roles.decorator';
+import { RoleEnum } from '../roles/roles.enum';
+import { RolesGuard } from '../roles/roles.guard';
 
 @ApiTags('Languages')
 @ApiBearerAuth()
@@ -38,6 +41,8 @@ import { FindAllLanguagesDto } from './dto/find-all-languages.dto';
 export class LanguagesController {
   constructor(private readonly languagesService: LanguagesService) {}
 
+  @Roles(RoleEnum.admin)
+  @UseGuards(RolesGuard)
   @Post()
   @ApiCreatedResponse({
     type: Language,
@@ -83,6 +88,8 @@ export class LanguagesController {
     return this.languagesService.findById(id);
   }
 
+  @Roles(RoleEnum.admin)
+  @UseGuards(RolesGuard)
   @Patch(':id')
   @ApiParam({
     name: 'id',
@@ -99,6 +106,8 @@ export class LanguagesController {
     return this.languagesService.update(id, updateLanguageDto);
   }
 
+  @Roles(RoleEnum.admin)
+  @UseGuards(RolesGuard)
   @Delete(':id')
   @ApiParam({
     name: 'id',

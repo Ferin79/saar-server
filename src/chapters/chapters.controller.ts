@@ -1,17 +1,15 @@
 import {
-  Controller,
-  Get,
-  Post,
   Body,
-  Patch,
-  Param,
+  Controller,
   Delete,
-  UseGuards,
+  Get,
+  Param,
+  Patch,
+  Post,
   Query,
+  UseGuards,
 } from '@nestjs/common';
-import { ChaptersService } from './chapters.service';
-import { CreateChapterDto } from './dto/create-chapter.dto';
-import { UpdateChapterDto } from './dto/update-chapter.dto';
+import { AuthGuard } from '@nestjs/passport';
 import {
   ApiBearerAuth,
   ApiCreatedResponse,
@@ -19,14 +17,19 @@ import {
   ApiParam,
   ApiTags,
 } from '@nestjs/swagger';
-import { Chapter } from './domain/chapter';
-import { AuthGuard } from '@nestjs/passport';
+import { Roles } from '../roles/roles.decorator';
+import { RoleEnum } from '../roles/roles.enum';
+import { RolesGuard } from '../roles/roles.guard';
 import {
   InfinityPaginationResponse,
   InfinityPaginationResponseDto,
 } from '../utils/dto/infinity-pagination-response.dto';
 import { infinityPagination } from '../utils/infinity-pagination';
+import { ChaptersService } from './chapters.service';
+import { Chapter } from './domain/chapter';
+import { CreateChapterDto } from './dto/create-chapter.dto';
 import { FindAllChaptersDto } from './dto/find-all-chapters.dto';
+import { UpdateChapterDto } from './dto/update-chapter.dto';
 
 @ApiTags('Chapters')
 @ApiBearerAuth()
@@ -38,6 +41,8 @@ import { FindAllChaptersDto } from './dto/find-all-chapters.dto';
 export class ChaptersController {
   constructor(private readonly chaptersService: ChaptersService) {}
 
+  @Roles(RoleEnum.admin)
+  @UseGuards(RolesGuard)
   @Post()
   @ApiCreatedResponse({
     type: Chapter,
@@ -96,6 +101,8 @@ export class ChaptersController {
     return this.chaptersService.findById(id);
   }
 
+  @Roles(RoleEnum.admin)
+  @UseGuards(RolesGuard)
   @Patch(':id')
   @ApiParam({
     name: 'id',
@@ -109,6 +116,8 @@ export class ChaptersController {
     return this.chaptersService.update(id, updateChapterDto);
   }
 
+  @Roles(RoleEnum.admin)
+  @UseGuards(RolesGuard)
   @Delete(':id')
   @ApiParam({
     name: 'id',
