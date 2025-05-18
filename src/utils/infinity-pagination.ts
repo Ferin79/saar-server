@@ -8,5 +8,9 @@ export const infinityPagination = <T>(
   return {
     data,
     hasNextPage: data.length === options.limit,
+    total: options.total || data.length,
+    pageInfo: {
+      hasNextPage: data.length === options.limit,
+    },
   };
 };

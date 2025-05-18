@@ -64,15 +64,14 @@ export class ChaptersController {
       limit = 50;
     }
 
-    return infinityPagination(
-      await this.chaptersService.findAllWithPagination({
-        paginationOptions: {
-          page,
-          limit,
-        },
-      }),
-      { page, limit },
-    );
+    const [data, total] = await this.chaptersService.findAllWithPagination({
+      paginationOptions: {
+        page,
+        limit,
+      },
+    });
+
+    return infinityPagination(data, { page, limit, total });
   }
 
   @Get('/number/:id')

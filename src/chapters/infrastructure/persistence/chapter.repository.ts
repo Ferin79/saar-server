@@ -12,7 +12,7 @@ export abstract class ChapterRepository {
     paginationOptions,
   }: {
     paginationOptions: IPaginationOptions;
-  }): Promise<Chapter[]>;
+  }): Promise<[Chapter[], number]>;
 
   abstract findById(id: Chapter['id']): Promise<NullableType<Chapter>>;
 

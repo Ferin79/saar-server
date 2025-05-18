@@ -27,14 +27,14 @@ export class ChapterRelationalRepository implements ChapterRepository {
     paginationOptions,
   }: {
     paginationOptions: IPaginationOptions;
-  }): Promise<Chapter[]> {
-    const entities = await this.chapterRepository.find({
+  }): Promise<[Chapter[], number]> {
+    const [entities, total] = await this.chapterRepository.findAndCount({
       skip: (paginationOptions.page - 1) * paginationOptions.limit,
       take: paginationOptions.limit,
       order: { number: 'ASC' },
     });
 
-    return entities.map((entity) => ChapterMapper.toDomain(entity));
+    return [entities.map((entity) => ChapterMapper.toDomain(entity)), total];
   }
 
   async findById(id: Chapter['id']): Promise<NullableType<Chapter>> {
