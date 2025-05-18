@@ -1,18 +1,17 @@
-import { LanguagesService } from '../languages/languages.service';
-import { Language } from '../languages/domain/language';
-
-import { ChaptersService } from '../chapters/chapters.service';
 import {
-  // common
-  Injectable,
   HttpStatus,
+  Injectable,
   UnprocessableEntityException,
 } from '@nestjs/common';
+import { ChaptersService } from '../chapters/chapters.service';
+import { Chapter } from '../chapters/domain/chapter';
+import { Language } from '../languages/domain/language';
+import { LanguagesService } from '../languages/languages.service';
+import { IPaginationOptions } from '../utils/types/pagination-options';
+import { ChapterTranslation } from './domain/chapter-translation';
 import { CreateChapterTranslationDto } from './dto/create-chapter-translation.dto';
 import { UpdateChapterTranslationDto } from './dto/update-chapter-translation.dto';
 import { ChapterTranslationRepository } from './infrastructure/persistence/chapter-translation.repository';
-import { IPaginationOptions } from '../utils/types/pagination-options';
-import { ChapterTranslation } from './domain/chapter-translation';
 
 @Injectable()
 export class ChapterTranslationsService {
@@ -79,6 +78,13 @@ export class ChapterTranslationsService {
         limit: paginationOptions.limit,
       },
     });
+  }
+
+  findByChapterAndLanguage(chapterNumber: number, languageCode: string) {
+    return this.chapterTranslationRepository.findByChapterAndLanguage(
+      chapterNumber,
+      languageCode,
+    );
   }
 
   findById(id: ChapterTranslation['id']) {

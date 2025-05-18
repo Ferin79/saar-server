@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, In } from 'typeorm';
 import { ChapterTranslationEntity } from '../entities/chapter-translation.entity';
@@ -58,6 +58,23 @@ export class ChapterTranslationRelationalRepository
     return entities.map((entity) => ChapterTranslationMapper.toDomain(entity));
   }
 
+  async findByChapterAndLanguage(
+    chapterNumber: number,
+    languageCode: string,
+  ): Promise<ChapterTranslation> {
+    const entity = await this.chapterTranslationRepository.findOne({
+      where: {
+        chapter: { number: chapterNumber },
+        language: { code: languageCode },
+      },
+      relations: ['chapter', 'language'],
+    });
+    if (!entity) {
+      throw new NotFoundException('Record not found');
+    }
+    return ChapterTranslationMapper.toDomain(entity);
+  }
+
   async update(
     id: ChapterTranslation['id'],
     payload: Partial<ChapterTranslation>,
@@ -67,7 +84,7 @@ export class ChapterTranslationRelationalRepository
     });
 
     if (!entity) {
-      throw new Error('Record not found');
+      throw new NotFoundException('Record not found');
     }
 
     const updatedEntity = await this.chapterTranslationRepository.save(

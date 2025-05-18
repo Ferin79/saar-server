@@ -1,17 +1,15 @@
 import {
-  Controller,
-  Get,
-  Post,
   Body,
-  Patch,
-  Param,
+  Controller,
   Delete,
-  UseGuards,
+  Get,
+  Param,
+  Patch,
+  Post,
   Query,
+  UseGuards,
 } from '@nestjs/common';
-import { ChapterTranslationsService } from './chapter-translations.service';
-import { CreateChapterTranslationDto } from './dto/create-chapter-translation.dto';
-import { UpdateChapterTranslationDto } from './dto/update-chapter-translation.dto';
+import { AuthGuard } from '@nestjs/passport';
 import {
   ApiBearerAuth,
   ApiCreatedResponse,
@@ -19,14 +17,16 @@ import {
   ApiParam,
   ApiTags,
 } from '@nestjs/swagger';
-import { ChapterTranslation } from './domain/chapter-translation';
-import { AuthGuard } from '@nestjs/passport';
 import {
   InfinityPaginationResponse,
   InfinityPaginationResponseDto,
 } from '../utils/dto/infinity-pagination-response.dto';
 import { infinityPagination } from '../utils/infinity-pagination';
+import { ChapterTranslationsService } from './chapter-translations.service';
+import { ChapterTranslation } from './domain/chapter-translation';
+import { CreateChapterTranslationDto } from './dto/create-chapter-translation.dto';
 import { FindAllChapterTranslationsDto } from './dto/find-all-chapter-translations.dto';
+import { UpdateChapterTranslationDto } from './dto/update-chapter-translation.dto';
 
 @ApiTags('Chaptertranslations')
 @ApiBearerAuth()
@@ -69,6 +69,31 @@ export class ChapterTranslationsController {
         },
       }),
       { page, limit },
+    );
+  }
+
+  // Get translation by langauage and chapter number
+  @Get(':chapterNumber/language/:languageCode')
+  @ApiParam({
+    name: 'chapterNumber',
+    type: String,
+    required: true,
+  })
+  @ApiParam({
+    name: 'languageCode',
+    type: String,
+    required: true,
+  })
+  @ApiOkResponse({
+    type: ChapterTranslation,
+  })
+  findByChapterAndLanguage(
+    @Param('chapterNumber') chapterNumber: string,
+    @Param('languageCode') languageCode: string,
+  ): Promise<ChapterTranslation> {
+    return this.chapterTranslationsService.findByChapterAndLanguage(
+      +chapterNumber,
+      languageCode,
     );
   }
 

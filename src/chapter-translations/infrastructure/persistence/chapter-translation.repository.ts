@@ -18,6 +18,11 @@ export abstract class ChapterTranslationRepository {
     id: ChapterTranslation['id'],
   ): Promise<NullableType<ChapterTranslation>>;
 
+  abstract findByChapterAndLanguage(
+    chapterNumber: number,
+    languageCode: string,
+  ): Promise<ChapterTranslation>;
+
   abstract findByIds(
     ids: ChapterTranslation['id'][],
   ): Promise<ChapterTranslation[]>;
