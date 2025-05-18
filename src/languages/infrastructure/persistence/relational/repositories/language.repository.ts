@@ -27,13 +27,13 @@ export class LanguageRelationalRepository implements LanguageRepository {
     paginationOptions,
   }: {
     paginationOptions: IPaginationOptions;
-  }): Promise<Language[]> {
-    const entities = await this.languageRepository.find({
+  }): Promise<[Language[], number]> {
+    const [entities, total] = await this.languageRepository.findAndCount({
       skip: (paginationOptions.page - 1) * paginationOptions.limit,
       take: paginationOptions.limit,
     });
 
-    return entities.map((entity) => LanguageMapper.toDomain(entity));
+    return [entities.map((entity) => LanguageMapper.toDomain(entity)), total];
   }
 
   async findById(id: Language['id']): Promise<NullableType<Language>> {

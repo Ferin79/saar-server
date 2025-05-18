@@ -64,15 +64,14 @@ export class LanguagesController {
       limit = 50;
     }
 
-    return infinityPagination(
-      await this.languagesService.findAllWithPagination({
-        paginationOptions: {
-          page,
-          limit,
-        },
-      }),
-      { page, limit },
-    );
+    const [data, total] = await this.languagesService.findAllWithPagination({
+      paginationOptions: {
+        page,
+        limit,
+      },
+    });
+
+    return infinityPagination(data, { page, limit, total });
   }
 
   @Get(':id')

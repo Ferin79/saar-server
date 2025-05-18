@@ -12,7 +12,7 @@ export abstract class LanguageRepository {
     paginationOptions,
   }: {
     paginationOptions: IPaginationOptions;
-  }): Promise<Language[]>;
+  }): Promise<[Language[], number]>;
 
   abstract findById(id: Language['id']): Promise<NullableType<Language>>;
 
