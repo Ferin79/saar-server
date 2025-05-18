@@ -15,7 +15,7 @@ export abstract class <%= name %>Repository {
     paginationOptions,
   }: {
     paginationOptions: IPaginationOptions;
-  }): Promise<<%= name %>[]>;
+  }): Promise<[<%= name %>[], number]>;
 
   abstract findById(id: <%= name %>['id']): Promise<NullableType<<%= name %>>>;
 

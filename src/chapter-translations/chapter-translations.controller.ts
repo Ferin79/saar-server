@@ -66,15 +66,15 @@ export class ChapterTranslationsController {
       limit = 50;
     }
 
-    return infinityPagination(
+    const [data, total] =
       await this.chapterTranslationsService.findAllWithPagination({
         paginationOptions: {
           page,
           limit,
         },
-      }),
-      { page, limit },
-    );
+      });
+
+    return infinityPagination(data, { page, limit, total });
   }
 
   // Get translation by langauage and chapter number

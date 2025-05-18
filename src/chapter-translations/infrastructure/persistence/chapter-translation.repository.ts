@@ -12,7 +12,7 @@ export abstract class ChapterTranslationRepository {
     paginationOptions,
   }: {
     paginationOptions: IPaginationOptions;
-  }): Promise<ChapterTranslation[]>;
+  }): Promise<[ChapterTranslation[], number]>;
 
   abstract findById(
     id: ChapterTranslation['id'],

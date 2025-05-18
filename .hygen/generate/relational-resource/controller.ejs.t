@@ -62,14 +62,16 @@ export class <%= h.inflection.transform(name, ['pluralize']) %>Controller {
       limit = 50;
     }
 
+  const [data, total] = await this.<%= h.inflection.camelize(h.inflection.pluralize(name), true) %>Service.findAllWithPagination({
+          paginationOptions: {
+            page,
+            limit,
+          },
+        });
+
     return infinityPagination(
-      await this.<%= h.inflection.camelize(h.inflection.pluralize(name), true) %>Service.findAllWithPagination({
-        paginationOptions: {
-          page,
-          limit,
-        },
-      }),
-      { page, limit },
+      data,
+      { page, limit, total },
     );
   }
 

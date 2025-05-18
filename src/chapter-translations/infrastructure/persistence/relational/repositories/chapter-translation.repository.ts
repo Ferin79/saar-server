@@ -29,13 +29,17 @@ export class ChapterTranslationRelationalRepository
     paginationOptions,
   }: {
     paginationOptions: IPaginationOptions;
-  }): Promise<ChapterTranslation[]> {
-    const entities = await this.chapterTranslationRepository.find({
-      skip: (paginationOptions.page - 1) * paginationOptions.limit,
-      take: paginationOptions.limit,
-    });
+  }): Promise<[ChapterTranslation[], number]> {
+    const [entities, total] =
+      await this.chapterTranslationRepository.findAndCount({
+        skip: (paginationOptions.page - 1) * paginationOptions.limit,
+        take: paginationOptions.limit,
+      });
 
-    return entities.map((entity) => ChapterTranslationMapper.toDomain(entity));
+    return [
+      entities.map((entity) => ChapterTranslationMapper.toDomain(entity)),
+      total,
+    ];
   }
 
   async findById(
