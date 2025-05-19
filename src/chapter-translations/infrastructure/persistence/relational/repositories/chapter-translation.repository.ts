@@ -37,8 +37,8 @@ export class ChapterTranslationRelationalRepository
       .take(paginationOptions.limit)
       .leftJoinAndSelect('chapterTranslation.chapter', 'chapter')
       .leftJoinAndSelect('chapterTranslation.language', 'language')
-      .groupBy('chapterTranslation.language.code')
-      .orderBy('chapterTranslation.chapter.number', 'ASC')
+      .groupBy('language.code')
+      .orderBy('chapter.number', 'ASC')
       .getManyAndCount();
 
     return [
