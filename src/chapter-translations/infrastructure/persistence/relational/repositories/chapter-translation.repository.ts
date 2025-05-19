@@ -30,16 +30,12 @@ export class ChapterTranslationRelationalRepository
   }: {
     paginationOptions: IPaginationOptions;
   }): Promise<[ChapterTranslation[], number]> {
-    // Convert above query to use QueryBuilder
-    const [entities, total] = await this.chapterTranslationRepository
-      .createQueryBuilder('chapterTranslation')
-      .skip((paginationOptions.page - 1) * paginationOptions.limit)
-      .take(paginationOptions.limit)
-      .leftJoinAndSelect('chapterTranslation.chapter', 'chapter')
-      .leftJoinAndSelect('chapterTranslation.language', 'language')
-      .groupBy('language.code')
-      .orderBy('chapter.number', 'ASC')
-      .getManyAndCount();
+    const [entities, total] =
+      await this.chapterTranslationRepository.findAndCount({
+        skip: (paginationOptions.page - 1) * paginationOptions.limit,
+        take: paginationOptions.limit,
+        order: { chapter: { number: 'ASC' } },
+      });
 
     return [
       entities.map((entity) => ChapterTranslationMapper.toDomain(entity)),
