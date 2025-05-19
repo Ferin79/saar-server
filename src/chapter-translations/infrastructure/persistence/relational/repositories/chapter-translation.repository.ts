@@ -35,6 +35,8 @@ export class ChapterTranslationRelationalRepository
       .createQueryBuilder('chapterTranslation')
       .skip((paginationOptions.page - 1) * paginationOptions.limit)
       .take(paginationOptions.limit)
+      .leftJoinAndSelect('chapterTranslation.chapter', 'chapter')
+      .leftJoinAndSelect('chapterTranslation.language', 'language')
       .groupBy('chapterTranslation.language.code')
       .orderBy('chapterTranslation.chapter.number', 'ASC')
       .getManyAndCount();
